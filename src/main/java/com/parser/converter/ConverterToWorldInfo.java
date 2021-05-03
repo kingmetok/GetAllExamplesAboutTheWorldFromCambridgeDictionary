@@ -34,14 +34,14 @@ public class ConverterToWorldInfo {
                 if (THEME.equals(htmlElement.toString())) {
                     theme = new Theme();
                     descriptions = new ArrayList<>();
-                    theme.setTheme(htmlElement.getTextContent());
-                    theme.setDescriptions(descriptions);
+                    theme.setName(htmlElement.getTextContent());
+                    theme.setExamples(descriptions);
                     themes.add(theme);
                 } else {
                     if (themes.isEmpty()) {
                         theme = new Theme();
                         descriptions = new ArrayList<>();
-                        theme.setDescriptions(descriptions);
+                        theme.setExamples(descriptions);
                         themes.add(theme);
                     }
                     descriptions.add(htmlElement.getTextContent().trim());

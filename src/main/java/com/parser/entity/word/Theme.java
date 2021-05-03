@@ -4,38 +4,38 @@ import java.util.List;
 
 public class Theme {
 
-    private String theme;
-    private List<String> descriptions;
+    private String name;
+    private List<String> examples;
 
     public Theme() {
     }
 
-    public Theme(final String theme, final List<String> descriptions) {
-        this.theme = theme;
-        this.descriptions = descriptions;
+    public Theme(final String name, final List<String> examples) {
+        this.name = name;
+        this.examples = examples;
     }
 
-    public String getTheme() {
-        return theme;
+    public String getName() {
+        return name;
     }
 
-    public void setTheme(final String theme) {
-        this.theme = theme;
+    public void setName(final String name) {
+        this.name = name;
     }
 
-    public List<String> getDescriptions() {
-        return descriptions;
+    public List<String> getExamples() {
+        return examples;
     }
 
-    public void setDescriptions(final List<String> descriptions) {
-        this.descriptions = descriptions;
+    public void setExamples(final List<String> examples) {
+        this.examples = examples;
     }
 
     @Override
     public String toString() {
         return "\n\t\tTheme{\n" +
-                "\t\t\ttheme\t\t\t=\t'" + theme + '\'' +
-                ",\n\t\t\tdescriptions\t=\t" + descriptions +
+                "\t\t\ttheme\t\t\t=\t'" + name + '\'' +
+                ",\n\t\t\tdescriptions\t=\t" + examples +
                 "}\n";
     }
 }
