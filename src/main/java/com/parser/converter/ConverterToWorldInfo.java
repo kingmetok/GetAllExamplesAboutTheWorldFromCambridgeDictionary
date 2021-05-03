@@ -30,22 +30,20 @@ public class ConverterToWorldInfo {
                 wordInfos.get(counterWords).setThemes(themes);
                 wordInfos.get(counterWords).setInfoAboutBlock(htmlElement.getTextContent().trim());
                 counterWords++;
+            } else if (THEME.equals(htmlElement.toString())) {
+                theme = new Theme();
+                descriptions = new ArrayList<>();
+                theme.setName(htmlElement.getTextContent());
+                theme.setExamples(descriptions);
+                themes.add(theme);
             } else {
-                if (THEME.equals(htmlElement.toString())) {
+                if (themes.isEmpty()) {
                     theme = new Theme();
                     descriptions = new ArrayList<>();
-                    theme.setName(htmlElement.getTextContent());
                     theme.setExamples(descriptions);
                     themes.add(theme);
-                } else {
-                    if (themes.isEmpty()) {
-                        theme = new Theme();
-                        descriptions = new ArrayList<>();
-                        theme.setExamples(descriptions);
-                        themes.add(theme);
-                    }
-                    descriptions.add(htmlElement.getTextContent().trim());
                 }
+                descriptions.add(htmlElement.getTextContent().trim());
             }
         }
 
