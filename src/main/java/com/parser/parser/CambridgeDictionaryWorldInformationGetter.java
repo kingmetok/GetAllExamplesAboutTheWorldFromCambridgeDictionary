@@ -1,4 +1,4 @@
-package com.parser;
+package com.parser.parser;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebClientOptions;

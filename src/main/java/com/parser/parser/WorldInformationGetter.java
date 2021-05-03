@@ -1,9 +1,9 @@
-package com.parser;
+package com.parser.parser;
 
 import com.parser.entity.word.WordInfo;
 
 import java.util.List;
 
 public interface WorldInformationGetter {
-    public List<WordInfo> getWorldInfo();
+    List<WordInfo> getWorldInfo();
 }
