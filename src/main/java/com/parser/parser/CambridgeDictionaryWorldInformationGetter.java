@@ -23,6 +23,14 @@ public class CambridgeDictionaryWorldInformationGetter implements WorldInformati
         this.world = world;
     }
 
+    public String getWorld() {
+        return world;
+    }
+
+    public void setWorld(final String world) {
+        this.world = world;
+    }
+
     @Override
     public List<WordInfo> getWorldInfo() {
         try (WebClient webClient = new WebClient()) {
